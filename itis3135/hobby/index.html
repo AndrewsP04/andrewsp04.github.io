@@ -8,22 +8,21 @@
         body {
             margin: 0;
             padding: 0;
-            font-family: 'Georgia', serif; /* Using Georgia as Accumulus isn’t provided */
-            background-color: #1f2a44; /* Deep blue-gray background */
-            color: #e0e1dd; /* Light grayish-white text */
+            font-family: 'Arial', sans-serif;
+            background-color: #e6e8e6;
+            color: #2f2f2f;
         }
 
         header {
-            background-color: #5c4033; /* Warm brown header */
-            padding: 1.5rem;
+            background-color: #4a5e6d;
+            padding: 1rem;
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            color: #f2e8cf;
         }
 
         h1 {
             margin: 0;
-            font-size: 2.8rem;
-            color: #f4d35e; /* Soft yellow heading */
+            font-size: 2.5rem;
         }
 
         nav {
@@ -31,33 +30,31 @@
         }
 
         nav a {
-            color: #f4d35e;
+            color: #f2e8cf;
             text-decoration: none;
-            padding: 0.6rem 1.2rem;
+            padding: 0.5rem 1rem;
             margin: 0 0.5rem;
-            background-color: #ee964b; /* Warm orange buttons */
-            border-radius: 8px;
-            transition: background-color 0.3s ease, transform 0.2s;
+            border-radius: 5px;
+            transition: background-color 0.3s;
         }
 
         nav a:hover {
-            background-color: #f4a261; /* Lighter orange hover */
-            transform: scale(1.05);
+            background-color: #6b8291;
         }
 
         main {
-            max-width: 900px;
-            margin: 2rem auto;
-            padding: 0 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
         }
 
         section {
             display: none;
-            background-color: #2e3955; /* Slightly lighter blue-gray */
-            padding: 2rem;
-            border-radius: 12px;
             margin-bottom: 2rem;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            background-color: #f2e8cf;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
 
         section.active {
@@ -65,75 +62,70 @@
         }
 
         h2 {
-            color: #f4d35e;
-            font-size: 2rem;
-            border-bottom: 3px solid #ee964b;
+            color: #4a5e6d;
+            border-bottom: 2px solid #6b8291;
             padding-bottom: 0.5rem;
-            margin-top: 0;
         }
 
         p {
-            line-height: 1.7;
-            font-size: 1.1rem;
-        }
-
-        i {
-            color: #b8c1d1; /* Muted light gray for italics */
+            line-height: 1.6;
         }
 
         figure {
-            margin: 1.5rem 0;
+            margin: 1rem 0;
             text-align: center;
         }
 
         figure img {
             max-width: 100%;
             height: auto;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
         }
 
         figcaption {
             font-style: italic;
-            color: #b8c1d1;
+            color: #5a5a5a;
             margin-top: 0.5rem;
-            font-size: 0.95rem;
+        }
+
+        i {
+            color: #5a5a5a;
         }
 
         footer {
-            background-color: #5c4033;
-            color: #e0e1dd;
+            background-color: #4a5e6d;
+            color: #f2e8cf;
             text-align: center;
-            padding: 1.5rem;
-            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.3);
+            padding: 1rem;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .designed-by {
+            margin-bottom: 1rem;
         }
 
         .designed-by a {
-            color: #ee964b;
+            color: #f2e8cf;
             text-decoration: none;
             font-weight: bold;
-            transition: color 0.3s;
         }
 
-        .designed-by a:hover {
-            color: #f4a261;
-        }
-
-        .validation-buttons a {
-            display: inline-block;
-            padding: 0.6rem 1.2rem;
+        .validation-buttons button {
+            background-color: #6b8291;
+            color: #f2e8cf;
+            border: none;
+            padding: 0.5rem 1rem;
             margin: 0 0.5rem;
-            background-color: #ee964b;
-            color: #e0e1dd;
-            text-decoration: none;
-            border-radius: 8px;
+            border-radius: 5px;
+            cursor: pointer;
             font-weight: bold;
-            transition: background-color 0.3s ease, transform 0.2s;
+            transition: background-color 0.3s;
         }
 
-        .validation-buttons a:hover {
-            background-color: #f4a261;
-            transform: scale(1.05);
+        .validation-buttons button:hover {
+            background-color: #8ca0ad;
         }
     </style>
 </head>
@@ -141,12 +133,12 @@
     <header>
         <h1>Audiophile Odyssey</h1>
         <nav>
-            <a href="#home" onclick="showSection('home')">Home</a> ❖
-            <a href="#about" onclick="showSection('about')">About Me</a> ❖
-            <a href="#schedule" onclick="showSection('schedule')">Best Listening Times</a> ❖
-            <a href="#locations" onclick="showSection('locations')">Best Spaces</a> ❖
-            <a href="#how" onclick="showSection('how')">How To</a> ❖
-            <a href="#why" onclick="showSection('why')">Why I Love It</a> ❖
+            <a href="#home" onclick="showSection('home')">Home</a> ♬
+            <a href="#about" onclick="showSection('about')">About Me</a> ♬
+            <a href="#schedule" onclick="showSection('schedule')">Best Listening Times</a> ♬
+            <a href="#locations" onclick="showSection('locations')">Best Spaces</a> ♬
+            <a href="#how" onclick="showSection('how')">How To</a> ♬
+            <a href="#why" onclick="showSection('why')">Why I Love It</a> ♬
             <a href="#ai-prompts" onclick="showSection('ai-prompts')">AI Prompts</a>
         </nav>
     </header>
@@ -155,55 +147,54 @@
         <section id="home" class="active">
             <h2>Home</h2>
             <p>Being an audiophile is about chasing the purest sound experience—whether through vinyl, high-resolution digital audio, or live performances. This site dives into my journey with this sonic passion, exploring what it means to truly hear music as it was intended.</p>
-            <p>An audiophile is someone who is passionate about high-quality audio and music reproduction. They seek to experience sound as close to its original recording as possible, with an emphasis on clarity, detail, and authenticity. Audiophiles often invest time and resources into building a superior audio setup, which might include high-end equipment like specialized speakers, headphones, amplifiers, turntables, and digital-to-analog converters (DACs), alongside acoustic treatments and uncompressed audio formats like FLAC or vinyl.</p>
+            <p>An audiophile is someone who is passionate about high-quality audio and music reproduction. They seek to experience sound as close to its original recording as possible, with an emphasis on clarity, detail, and authenticity. Audiophiles often invest time and resources into building a superior audio setup, which might include:</p>
+            <p>High-end Equipment: Specialized speakers, headphones, amplifiers, turntables, and digital-to-analog converters (DACs).</p>
+            <p>Acoustic Treatments: Optimizing their listening spaces to reduce sound distortion or interference.</p>
+            <p>Source Material: Preferring uncompressed formats like FLAC or vinyl records over compressed formats like MP3s, to maintain audio fidelity.</p>
+            <p>It's not just about owning expensive gear; audiophiles appreciate the science and artistry of sound engineering. They often have a deep knowledge of acoustics and enjoy experimenting to find the perfect audio setup tailored to their tastes.</p>
             <figure>
                 <img src="images/vinyl-setup.jpg" alt="Vinyl setup">
                 <figcaption>A meticulously arranged vinyl listening setup</figcaption>
             </figure>
-            <p><i>Prompt: "Photorealistic image of a vintage turntable with vinyl records and warm ambient lighting"</i></p>
         </section>
 
         <section id="about">
             <h2>About Me</h2>
             <p>I’ve been an audiophile for over a decade, starting with a modest stereo system and evolving into a collector of rare vinyl and high-end gear. What began as a simple interest has grown into a deep passion for the art of sound.</p>
-            <p>As a casual audiophile, I revel in the intricate details of music—the shimmer of a cymbal, the pluck of a guitar string, or the resonance of a sitar. I’m captivated by sound staging, stereo separation, and spatial audio, which bring a three-dimensional depth to every track. My musical tastes are wonderfully diverse, ranging from the infectious energy of pop and hip-hop to the improvisational brilliance of jazz, the mellow vibes of soft rock, the rich traditions of Indian classical music, and the cinematic flair of Bollywood soundtracks. Each genre offers a unique sonic palette that fuels my curiosity and keeps my listening sessions endlessly exciting.</p>
+            <p>As a casual audiophile, my appreciation for music goes beyond just enjoying melodies and lyrics—I take delight in the intricate details and technical aspects of sound. I find joy in listening to various instruments, savoring the nuances of their tones and the subtle elements that might elude others, like a faint guitar riff or the resonance of a piano chord. My interest in sound staging, stereo separation, and spatial audio highlights my love for experiencing music in an immersive, three-dimensional way, where I can sense the placement of each instrument and feel the depth of sound. With a diverse taste in music, spanning pop, hip-hop, jazz, soft rock, Indian music, and Bollywood, I explore an eclectic mix of rhythms, melodies, and production styles. Whether it’s the vibrant beats of hip-hop, the soulful instrumentation of jazz, or the intricate layers in Bollywood tracks, each genre offers something unique to satisfy my audiophile curiosity. This passion is complemented by a keen interest in exploring sound quality, making each listening experience not just a moment of enjoyment, but an adventure into the world of audio craftsmanship.</p>
             <figure>
                 <img src="images/audiophile-portrait.jpg" alt="Audiophile portrait">
                 <figcaption>Me enjoying a listening session</figcaption>
             </figure>
-            <p><i>Prompt: "Photorealistic portrait of an audiophile listening to music through headphones in a cozy room"</i></p>
         </section>
 
         <section id="schedule">
             <h2>Best Listening Times</h2>
-            <p>Late evenings offer a perfect sanctuary for immersive listening, as the stillness of the world enhances every subtle detail in the music, allowing each note, beat, and melody to resonate with unparalleled clarity. It’s a time when distractions fade, and the music takes center stage, wrapping me in its intricate layers.</p>
-            <p>Early mornings bring their own charm, especially with the aroma of fresh coffee mingling with the warmth of a vinyl spinning on the turntable. The crisp air and soft dawn light create a serene backdrop, turning each listening session into a rejuvenating ritual that sets a positive tone for the day ahead.</p>
+            <p>Late evenings offer a perfect sanctuary for immersive listening, as the stillness of the world enhances every subtle detail in the music, allowing each note, beat, and melody to resonate with unparalleled clarity. It's a time when the layers of sound seem to unfold effortlessly, creating an intimate connection with the music.</p>
             <figure>
                 <img src="images/cozy-listening-night.jpg" alt="Cozy listening at night">
                 <figcaption>Enjoying a late-night listening session with headphones</figcaption>
             </figure>
-            <p><i>Prompt: "Photorealistic scene of a cozy room at night with a high-end audio system glowing softly"</i></p>
+            <p>Early mornings bring their own charm, especially with the aroma of fresh coffee mingling with the warmth of a vinyl spinning on the turntable. The combination of soft morning light and a fresh perspective sets the tone for an uplifting start to the day, making music feel like a rejuvenating ritual. Both moments capture the essence of savoring sound in its purest form.</p>
         </section>
 
         <section id="locations">
             <h2>Best Spaces</h2>
-            <p>A dedicated listening room with acoustic treatment is the ultimate haven for audiophiles, allowing music to be experienced in its purest form. This space is meticulously designed to eliminate external noise and control sound reflections, ensuring every detail is pristine.</p>
-            <p>Acoustic panels, bass traps, and diffusers balance frequencies and reduce distortion, while soft lighting enhances the ambiance. It’s a sacred space where music isn’t just heard—it’s felt deeply.</p>
+            <p>A dedicated listening room with acoustic treatment is the ultimate haven for audiophiles, allowing music to be experienced in its purest and most unadulterated form. This space is meticulously designed to eliminate external noise and control sound reflections, ensuring that every note, rhythm, and detail is heard exactly as intended by the artist. Acoustic panels, bass traps, and diffusers are strategically placed to balance sound frequencies, reduce echoes, and prevent distortion, creating an environment where sound staging and stereo separation can truly shine. The layout often includes carefully chosen furniture and materials that complement the room's acoustic properties without interfering with the sound. Lighting, too, is tailored to enhance the ambiance, often soft and warm to encourage an immersive experience. For an audiophile, this room becomes more than just a place to listen—it transforms into a sacred space where music is not just heard but felt, offering an unparalleled connection to the art of sound.</p>
             <figure>
                 <img src="images/listening-room.jpg" alt="Listening room">
                 <figcaption>My custom listening room setup</figcaption>
             </figure>
-            <p><i>Prompt: "Photorealistic image of a modern listening room with speakers, acoustic panels, and warm lighting"</i></p>
         </section>
 
         <section id="how">
             <h2>How To</h2>
-            <p>Start your audiophile journey with quality equipment—opt for a solid pair of headphones or speakers that prioritize sound fidelity over flashy features. The Sony WH-1000XM5 headphones, for instance, deliver exceptional clarity and noise cancellation, making them a fantastic entry point. Experiment with lossless audio files like FLAC, available on platforms like Tidal, and tweak speaker placement for an optimal soundstage—think ear-level positioning in an equilateral triangle with your seat.</p>
+            <p>Getting started on your audiophile journey is all about making thoughtful choices and experimenting to find what suits your preferences. Invest in Quality Equipment: Start with a solid pair of headphones or speakers that align with your budget and sound preferences. For example, the Sony WH-1000XM5 noise-canceling headphones are an excellent choice, offering superb clarity, a balanced sound profile, and noise-canceling features that enhance immersion. Focus on quality over quantity—better to have one great pair than several mediocre ones.</p>
             <figure>
                 <img src="images/sony-headphones.jpg" alt="Sony headphones">
                 <figcaption>High-end Sony WH-1000XM5 noise-canceling headphones</figcaption>
             </figure>
-            <p><i>Prompt: "Photorealistic image of high-end headphones on a wooden stand next to a tube amplifier"</i></p>
+            <p>Explore Lossless Audio: Step up your audio game with high-quality lossless formats like FLAC or streaming services like Tidal and Apple Music Lossless. Lossless audio retains the full quality of the original recording, ensuring you hear every detail in the music. Pair this with formats like Dolby Atmos, available on platforms like Apple Music, to experience a multidimensional, spatial sound.</p>
             <figure>
                 <img src="images/flac-tidal.jpg" alt="FLAC and Tidal logos">
                 <figcaption>FLAC and Tidal logos representing lossless audio options</figcaption>
@@ -212,44 +203,45 @@
                 <img src="images/apple-music-lossless.jpeg" alt="Apple Music lossless">
                 <figcaption>Apple Music showcasing Dolby Atmos and Lossless audio</figcaption>
             </figure>
+            <p>Optimize Your Listening Space: If you’re using speakers, experiment with placement to create the best soundstage. Position them at ear level and form an equilateral triangle with your listening position for optimal stereo separation. For added fidelity, consider acoustic treatments like foam panels or diffusers to reduce room echoes and improve overall sound clarity.</p>
+            <p>Leverage Versatile Playback Devices: Use devices that support high-resolution audio, such as Apple or Android phones. Many modern smartphones are equipped to handle lossless audio, and pairing them with a high-quality digital-to-analog converter (DAC) can elevate your listening experience even further.</p>
             <figure>
                 <img src="images/apple-android-phones.jpg" alt="Apple and Android phones">
                 <figcaption>Listening to music on Apple or Android devices for versatile audio playback</figcaption>
             </figure>
-            <p><i>Prompts: "Photorealistic image of audio format logos with a modern music interface," "Photorealistic image of a smartphone displaying a music app with lossless audio certifications," "Photorealistic image of smartphones with Apple and Android logos on a wooden surface"</i></p>
+            <p>Experiment and Enjoy: The audiophile journey is about exploration. Test different genres, devices, and audio setups to find what resonates with you. Play with EQ settings, try out various streaming platforms, or even delve into vinyl if you’re looking for a nostalgic, analog experience. This methodical yet personal approach ensures you're not just hearing music but truly experiencing it in all its richness and depth.</p>
         </section>
 
         <section id="why">
             <h2>Why I Love It</h2>
-            <p>For me, being an audiophile is about hearing music as the artist intended—capturing every nuance, every breath, and every emotion in the performance. It’s a bridge to the creator’s soul, turning each track into a vivid story told through sound.</p>
-            <p>This hobby connects me to music on a profound level, transforming listening into a meditative escape where the world melts away. It’s a celebration of artistry and human expression, deepening my appreciation with every note.</p>
+            <p>For me, being an audiophile is more than just a technical appreciation of sound; it’s a way to bridge the gap between the artist's intention and my own experience. It’s about hearing music exactly as it was meant to be heard—capturing every delicate nuance, every subtle breath, and every raw emotion embedded in the performance. Each piece of music becomes a story, conveyed not just through melody and lyrics but through the textures, dynamics, and layers of sound. This hobby allows me to connect with music on a profoundly intimate, almost spiritual level, transforming listening into a meditative act where the world fades away, leaving only the resonance of a shared human expression. It's a reminder of the artistry and vulnerability behind every note, offering an unmatched depth of experience that transcends mere entertainment.</p>
             <figure>
                 <img src="images/live-recording-session.jpeg" alt="Live recording session">
                 <figcaption>Capturing the energy of a live recording session in the studio</figcaption>
             </figure>
-            <p><i>Prompt: "Photorealistic image of a live music performance with vibrant stage lighting and clear sound waves"</i></p>
         </section>
 
         <section id="ai-prompts">
             <h2>AI Prompts</h2>
-            <p>"Create an index page that includes all the normal items our pages have had so far - do not use includes. header/main/footer within the body header tag should have a heading1 tag that is the name of the hobby Double check Accumulus is present without warnings/errors. Footer tag should have validation buttons (images) or stylized text for html, css, and disability. (if you use text, don't make it look like a normal link, make it look like a button/control. There are many online tutorials about how to do this). The entire page should have valid html and css with no warnings when you're done. Validation button that validates for disability/accessibility is VERY IMPORTANT, link below https://wave.webaim.org/report#/https://webpages.charlotte.edu/UNCCID/itis3135/PAGENAMELinks to an external site. Image button_validation_wcag-1.png, check the announcements to download this image In the footer above the validation put a link to your design firm as you did with the course website. The only commonality with your main pages will be the requirement for validation buttons (and the page should validate), and the "designed by" section that links to your design firm. Use an embedded stylesheet since this is all one page. Make sure the styling is nice and follows the CRAP principles, No times new roman, generic blue underlined links, no white background, no black text, you get it. Color scheme has to be different than your main site pages. Create sections which will represent each "page" (there is a section tag/element in html) for each of the pages that will make up your hobby site. These sections will be within your main: who (this name is a guide- you can change it to be something related, like "About Me" or "About" or "Who we Are") what (this will be your home page- and you can call it home, and it's what should load first, explain what the hobby is about ) when (this name is a guide - you can change use it or change it to something like "Best Times" or "Schedule" or "Seasons" or something time related. where (this name is a guide and you can also change it to "best locations" or something like that) how why AI Prompts ( If you used AI to generate code or just text, make this section so that we can see all the prompts used to create this page, If you only used AI for images and nothing else, you don't need to make this section AND you need to put in the comment section of your submission that "I only used AI for images so I don't need the AI-content section" to get full points for the "AI Prompts section" ) Each section should have an h2 that has the name of that page while the overall page should have a normal heading representing the whole site (as an h1). Each section should have AT MINIMUM three things under the h2... i.e. two paragraphs and a figure, a paragraph and two figures, a table, form, and a figure, etc... A figure is an img and figcaption. A table counts as a thing. A form counts as a thing. A slideshow counts as a thing. A figure counts as a thing. Make it look nice and be creative. Put at least a figure on each section, and make it related to your hobby. It must be open use, your own photo, or AI generated. It must be in a figure tag and contain a caption. - The images should be in relatively the same style (e.g. all pages photorealistic, or all pages cartoon-ish). You must also have an italicized paragraph below the figure and need to provide the prompt you used to generate the image. (Image + figcaption + italicized paragraph explaining prompt = 1 thing) You also have the option to add your own image. Make sure they are yours, or open-source/not copyrighted. A figure element will have an image with a figcaption relevant to the image. (Image + figcaption = 1 thing) Be careful to not mess up the aspect ratio, and be sure to resize large images in an image editor so that users are not downloading the whole image before resizing it. ONCE you've completed creating all of your sections Research and find a solution using css and/or JS that hides all sections except the one you have clicked. The idea is to mimic the nav bar in your main site, the user will click a "link" in your nav tag that will hide all the sections on the page and ONLY display info of the section of choice. So if you click on the word "Best locations" in the nav bar, it will only display the "best locations" section on the page and hide the rest so the user can't scroll to see it. Add your "links" to the different sections in the header bar in the nav tag, also make sure that you have a symbol (i.e. emoji or speial character) as a divider (should also be different from all of your other pages). Add the provided images to Home, About Me, Best Listening Times, Best Spaces, How To, and Why I Love It I am casual audiophile who enjoys listening to various instruments, details, sound staging, stereo separation, spatial audio. I listen to variety of music like pop, hip-hop, jazz, soft rock, Indian music, Bollywood, etc. Expand on this Late evenings are ideal—when the world quiets down, every note shines through with clarity. Early mornings work too, especially with coffee and a fresh vinyl spin. Expand on this in a short paragraph How To Start with a decent pair of headphones or speakers—focus on quality over quantity. Sony headphones High-end Sony WH-1000XM5 noise-canceling headphones Experiment with lossless audio files and room placement for the best soundstage. FLAC and Tidal logos FLAC and Tidal logos representing lossless audio options Apple Music lossless Apple Music showcasing Dolby Atmos and Lossless audio Apple and Android phones Listening to music on Apple or Android devices for versatile audio playback Expand on this It’s about hearing music as the artist intended—every nuance, every breath. This hobby connects me to music on a deeper, almost spiritual level. Expand on this Remove "HTML" "CSS" and "Accessibility" buttons on all pages"</p>
-            <p>This section details the prompt used to guide the creation of this index page, ensuring transparency in how AI assisted in structuring and expanding content.</p>
-            <figure>
-                <img src="images/ai-interface.jpg" alt="AI interface">
-                <figcaption>A conceptual AI interface assisting in content creation</figcaption>
-            </figure>
-            <p><i>Prompt: "Photorealistic image of a sleek, modern AI interface glowing on a screen in a dimly lit room"</i></p>
+            <p>Here are the prompts I used to generate images for this site:</p>
+            <ul>
+                <li>"Photorealistic image of a vintage turntable with vinyl records and warm ambient lighting"</li>
+                <li>"Photorealistic portrait of an audiophile listening to music through headphones in a cozy room"</li>
+                <li>"Photorealistic scene of a cozy room at night with a high-end audio system glowing softly"</li>
+                <li>"Photorealistic image of a modern listening room with speakers, acoustic panels, and warm lighting"</li>
+                <li>"Photorealistic image of high-end headphones on a wooden stand next to a tube amplifier"</li>
+                <li>"Photorealistic image of a live music performance with vibrant stage lighting and clear sound waves"</li>
+                <li>"Photorealistic image of audio format logos with a modern music interface"</li>
+                <li>"Photorealistic image of a smartphone displaying a music app with lossless audio certifications"</li>
+                <li>"Photorealistic image of smartphones with Apple and Android logos on a wooden surface"</li>
+            </ul>
+            <p>These prompts ensured a consistent photorealistic style that reflects the audiophile aesthetic.</p>
         </section>
     </main>
 
     <footer>
         <div class="designed-by">
             <p>Designed by <a href="https://yourdesignfirm.com">Andrews VisionWorks</a></p>
-        </div>
-        <div class="validation-buttons">
-            <a href="https://validator.w3.org/check?uri=referer">HTML</a>
-            <a href="https://jigsaw.w3.org/css-validator/check/referer">CSS</a>
-            <a href="https://wave.webaim.org/report#/https://webpages.charlotte.edu/UNCCID/itis3135/index.html">Accessibility</a>
         </div>
     </footer>
 
