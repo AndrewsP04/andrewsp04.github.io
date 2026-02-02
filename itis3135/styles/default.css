@@ -1,0 +1,26 @@
+/* 1. Different Body Background & 2. Foreground Color */
+body {
+    background-color: #e0e7ff;
+    color: #1e293b;
+    /* 3. Different font for normal text */
+    font-family: 'Verdana', sans-serif;
+    /* 4. Different Max-width */
+    max-width: 800px;
+    /* 5. Margin 0 auto */
+    margin: 20px auto;
+}
+
+/* 6. Different stylized Heading font */
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+    color: #4338ca;
+}
+
+/* 7. Footer Style Variation */
+footer {
+    border-top: 2px solid #4338ca;
+    margin-top: 30px;
+    padding-top: 10px;
+    font-size: 0.9em;
+}

@@ -1,0 +1,26 @@
+/* 1. Body Background Color & 2. Body Text Color */
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    /* 3. Sans-serif font for small text */
+    font-family: Arial, Helvetica, sans-serif;
+    /* 4. Max-width to prevent stretching */
+    max-width: 900px;
+    /* 5. Margin 0 auto to move content to the middle */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* 6. Styled font for headings */
+h1, h2, h3 {
+    font-family: 'Georgia', serif;
+    color: #1a2a6c;
+}
+
+/* 7. Unique Header/Footer Background */
+header, footer {
+    background-color: #ffffff;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
