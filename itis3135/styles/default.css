@@ -37,3 +37,27 @@ nav a {
 nav a:hover {
     text-decoration: underline;
 }
+
+/* Style for all links within the body */
+a {
+    color: #FFD700; /* Gold color for high contrast */
+    text-decoration: none; /* Removes the default underline */
+    font-weight: bold;
+}
+
+/* Hover state to provide visual feedback */
+a:hover {
+    color: #FFF; /* Turns white when hovered */
+    text-decoration: underline;
+}
+
+/* Specifically styling links in the header and footer navs */
+nav a {
+    padding: 0 5px;
+    color: #FFD700;
+}
+
+/* Ensure visited links don't turn into hard-to-read purple */
+a:visited {
+    color: #FFD700;
+}
