@@ -1,26 +1,23 @@
-/* 1. Body Background Color & 2. Body Text Color */
 body {
-    background-color: #f4f4f9;
-    color: #333;
-    /* 3. Sans-serif font for small text */
-    font-family: Arial, Helvetica, sans-serif;
-    /* 4. Max-width to prevent stretching */
-    max-width: 900px;
-    /* 5. Margin 0 auto to move content to the middle */
-    margin: 0 auto;
-    padding: 20px;
+    background-color: #F8F9FA; /* Style 1: Background */
+    color: #212529;            /* Style 2: Foreground */
+    font-family: 'Inter', -apple-system, sans-serif; /* Style 3: Sans-serif body font */
+    max-width: 900px;          /* Style 4: Max-width */
+    margin: 0 auto;            /* Style 5: Horizontal centering */
+    line-height: 1.6;          /* Style 6: Improved readability */
+    padding: 40px 20px;
 }
 
-/* 6. Styled font for headings */
-h1, h2, h3 {
-    font-family: 'Georgia', serif;
-    color: #1a2a6c;
+h1 {
+    font-family: 'Playfair Display', serif; /* Style 7: Stylized heading font */
+    color: #007AFF;
+    border-bottom: 2px solid #007AFF;
+    padding-bottom: 10px;
 }
 
-/* 7. Unique Header/Footer Background */
-header, footer {
-    background-color: #ffffff;
-    padding: 10px;
-    margin-bottom: 20px;
-    border-radius: 8px;
+footer {
+    font-size: 0.85rem;
+    color: #6C757D;
+    text-align: center;
+    margin-top: 50px;
 }

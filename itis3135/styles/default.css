@@ -1,26 +1,27 @@
-/* 1. Different Body Background & 2. Foreground Color */
 body {
-    background-color: #e0e7ff;
-    color: #1e293b;
-    /* 3. Different font for normal text */
-    font-family: 'Verdana', sans-serif;
-    /* 4. Different Max-width */
-    max-width: 800px;
-    /* 5. Margin 0 auto */
-    margin: 20px auto;
+    background-color: #2D3436; /* Style 1: Dark Background */
+    color: #DFE6E9;            /* Style 2: Light Foreground */
+    font-family: 'Verdana', Geneva, sans-serif; /* Style 3: Different body font */
+    max-width: 850px;          /* Style 4: Different Max-width */
+    margin: 20px auto;         /* Style 5: Centered container */
+    padding: 30px;
 }
 
-/* 6. Different stylized Heading font */
 h1 {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Orbitron', sans-serif; /* Style 6: High-tech/Mascot stylized font */
+    color: #CD7F32;
     text-transform: uppercase;
-    color: #4338ca;
+    letter-spacing: 2px;
 }
 
-/* 7. Footer Style Variation */
 footer {
-    border-top: 2px solid #4338ca;
-    margin-top: 30px;
-    padding-top: 10px;
-    font-size: 0.9em;
+    background-color: #1e272e; /* Style 7: Contrasting footer background */
+    padding: 20px;
+    border-radius: 5px;
+}
+
+nav a {
+    color: #CD7F32; /* Style 8: Themed link colors */
+    text-decoration: none;
+    font-weight: bold;
 }
