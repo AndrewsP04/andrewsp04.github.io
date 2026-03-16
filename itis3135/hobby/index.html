@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrews Palaparthi | HCI Hobby Site</title>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    
+    <style>
+        /* --- Embedded Stylesheet --- */
+        :root {
+            --bg-color: #0f172a; 
+            --text-color: #f8fafc; 
+            --accent-color: #fbbf24; 
+            --secondary-text: #94a3b8; 
+            --nav-bg: #1e293b;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--nav-bg);
+            padding: 2rem 1rem;
+            text-align: center;
+            border-bottom: 3px solid var(--accent-color);
+        }
+
+        h1 { margin: 0; color: var(--accent-color); text-transform: uppercase; letter-spacing: 2px; }
+
+        nav { margin-top: 1rem; }
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        nav a:hover { color: var(--accent-color); text-decoration: underline; }
+
+        .divider { color: var(--accent-color); padding: 0 5px; }
+
+        main { padding: 2rem; max-width: 900px; margin: auto; min-height: 60vh; }
+
+        section { display: none; } 
+        .active { display: block; }
+
+        h2 { border-left: 5px solid var(--accent-color); padding-left: 15px; margin-bottom: 1.5rem; }
+
+        figure { margin: 2rem 0 0.5rem 0; background: #1e293b; padding: 1rem; border-radius: 8px; }
+        img { max-width: 100%; height: auto; border-radius: 4px; }
+        figcaption { font-size: 0.9rem; color: var(--secondary-text); margin-top: 0.5rem; }
+        
+        /* The AI Prompt Paragraph styling */
+        .ai-prompt { 
+            font-style: italic; 
+            font-size: 0.85rem; 
+            color: var(--accent-color); 
+            margin-top: 0; 
+            margin-bottom: 2rem;
+        }
+
+        table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+        th, td { border: 1px solid var(--secondary-text); padding: 10px; text-align: left; }
+        th { background: var(--nav-bg); }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--nav-bg);
+            margin-top: 3rem;
+        }
+        footer a { color: var(--accent-color); text-decoration: none; }
+        .validation-links { margin-top: 1rem; }
+        .validation-links img { height: 31px; width: 88px; margin: 0 5px; }
+    </style>
+</head>
+<body onload="showSection('what')">
+
+    <header>
+        <h1>Human-Computer Interaction</h1>
+        <nav>
+            <a onclick="showSection('what')">What</a> <span class="divider">✦</span>
+            <a onclick="showSection('who')">Who</a> <span class="divider">✦</span>
+            <a onclick="showSection('when')">When</a> <span class="divider">✦</span>
+            <a onclick="showSection('where')">Where</a> <span class="divider">✦</span>
+            <a onclick="showSection('how')">How</a> <span class="divider">✦</span>
+            <a onclick="showSection('why')">Why</a> <span class="divider">✦</span>
+            <a onclick="showSection('ai')">AI Prompts</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="what">
+            <h2>The Essence of HCI</h2>
+            <p>Human-Computer Interaction (HCI) is a multidisciplinary field focusing on the design of computer technology and the interaction between humans and users.</p>
+            
+            <table>
+                <tr><th>Core Pillar</th><th>Description</th></tr>
+                <tr><td>Usability</td><td>Ensuring systems are efficient and easy to learn.</td></tr>
+                <tr><td>Accessibility</td><td>Making tech usable for everyone, regardless of ability.</td></tr>
+                <tr><td>User Experience</td><td>Focusing on the emotional and meaningful journey of a user.</td></tr>
+            </table>
+
+            <figure>
+                <img src="images/hci-concept.png" alt="Conceptual visualization of a neural link to a digital interface">
+                <figcaption>Figure 1: The bridge between human cognition and digital systems.</figcaption>
+            </figure>
+            <p class="ai-prompt">Prompt: Photorealistic 3D render of a glowing digital interface hovering over a human hand, cinematic lighting, deep blue and amber tones, 8k resolution.</p>
+        </section>
+
+        <section id="who">
+            <h2>The Minds Behind the Tech</h2>
+            <p>I am a computer science student at UNC Charlotte focusing on Human-Computer Interaction and UX design. I believe that technology should be intuitive and helpful, not a barrier.</p>
+            
+            <ul>
+                <li>Experienced Figma Prototyper</li>
+                <li>Developed Android Application for Capstone Project</li>
+                <li>Really passionate in pursuing a career in HCI</li>
+                <li>Aspiring PhD Candidate (Fall 2026)</li>
+            </ul>
+
+            <figure>
+                <img src="images/designer-at-work.png" alt="A designer sketching wireframes on a tablet">
+                <figcaption>Figure 2: The iterative process of UX research and sketching.</figcaption>
+            </figure>
+            <p class="ai-prompt">Prompt: Over-the-shoulder shot of a designer using a stylus on a high-tech tablet, drafting wireframes, minimalist studio background, photorealistic style.</p>
+        </section>
+
+        <section id="when">
+            <h2>Optimal Research Cycles</h2>
+            <p>The "When" of HCI is constant. Research should begin before the first line of code is written and continue through the maintenance phase of a product.</p>
+            <p>Key phases include the Discovery Phase, Iterative Testing, and Post-Launch Analytics.</p>
+            
+            <figure>
+                <img src="images/timeline.png" alt="A glowing timeline of the design process">
+                <figcaption>Figure 3: The timeline of user-centered design.</figcaption>
+            </figure>
+            <p class="ai-prompt">Prompt: A glowing, futuristic horizontal timeline showing phases like Discover, Define, Ideate, and Prototype, photorealistic, blurred background.</p>
+        </section>
+
+        <section id="where">
+            <h2>The Lab and the Field</h2>
+            <p>HCI takes place in a variety of environments. While labs provide controlled data, "in-the-wild" testing reveals how users behave in stressful or distracting real-world scenarios.</p>
+            
+            <ul>
+                <li>Usability Testing Labs</li>
+                <li>Contextual Inquiry (Home/Office)</li>
+                <li>Remote Testing (Digital)</li>
+            </ul>
+
+            <figure>
+                <img src="images/lab.png" alt="A clean, modern tech lab with multiple monitors">
+                <figcaption>Figure 4: A modern HCI research workstation.</figcaption>
+            </figure>
+            <p class="ai-prompt">Prompt: Clean laboratory setting with ultra-wide monitors displaying heatmaps and data visualizations, photorealistic, soft lighting.</p>
+        </section>
+
+        <section id="how">
+            <h2>The Methodology</h2>
+            <p>We use a variety of tools and methods to measure interaction quality, ranging from eye-tracking software to simple paper prototypes.</p>
+            
+            <form>
+                <label for="feedback">Suggest a UX Improvement:</label><br>
+                <input type="text" id="feedback" name="feedback" placeholder="e.g., Higher contrast"><br><br>
+                <button type="button">Submit Idea</button>
+            </form>
+
+            <figure>
+                <img src="images/workflow.png" alt="3D icons representing different design tools">
+                <figcaption>Figure 5: The tools of the trade—Figma and Creative Suites.</figcaption>
+            </figure>
+            <p class="ai-prompt">Prompt: 3D isometric icons of design tools and code brackets, floating in a dark space, vibrant amber glow, photorealistic.</p>
+        </section>
+
+        <section id="why">
+            <h2>Why HCI Matters</h2>
+            <p>Technology is now an essential part of the human experience. If tech is hard to use, it creates a digital divide. HCI seeks to close that gap.</p>
+            <p>By studying how people think (cognition) and feel (emotion), we can build tools that truly empower rather than frustrate.</p>
+            
+            <figure>
+                <img src="images/impact.png" alt="A diverse group of people using a large touchscreen together">
+                <figcaption>Figure 6: Technology bridging the gap between people.</figcaption>
+            </figure>
+            <p class="ai-prompt">Prompt: A diverse group of people interacting with a large, glowing interactive table, smiling, photorealistic, cinematic lighting.</p>
+        </section>
+
+        <section id="ai">
+            <h2>AI Prompts & Attribution</h2>
+            <p><strong>Model Used:</strong> Gemini 3 Thinking & Nano Banana 2</p>
+           <p>I used Gemini to help structure the single-page toggle logic and refine the CSS grid for the tables. All image prompts are listed directly beneath each figure for transparency.</p>
+            <ul>
+                <li>Prompt for HTML Structure: "Create a single-page HTML structure with sections that can be toggled using JavaScript."</li>
+                <li>Prompt for CSS: "Generate a color scheme for a professional tech site using deep navy and amber, avoiding default link colors."</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Page designed by <a href="andrewscreativegroup.com/index.html">Andrews Creative Group (ACG)</a> &copy; 2026</p>
+        <div class="validation-links">
+            <a href="https://validator.w3.org/check?uri=referer"><img src="images/button_validation_html5.png" alt="Validate HTML"></a>
+            <a href="https://jigsaw.w3.org/css-validator/check/referer"><img src="images/button_validation_css.png" alt="Validate CSS"></a>
+            <a href="https://wave.webaim.org/"><img src="images/button_validation_wcag.png" alt="Validate Accessibility"></a>
+        </div>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach((sec) => sec.classList.remove('active'));
+            document.getElementById(sectionId).classList.add('active');
+            window.scrollTo(0,0);
+        }
+    </script>
+</body>
+</html>
