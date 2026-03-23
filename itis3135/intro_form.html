@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction Form | Andrews Palaparthi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="scripts/HTMLInclude.min.js"></script>
+</head>
+<body>
+    <div data-include="components/header.html"></div>
+
+    <main>
+        <h2>Introduction Form</h2>
+        <h3>Please submit the form below.</h3>
+
+        <form id="intro-form">
+            <fieldset>
+                <legend>Personal Information</legend>
+                
+                <label for="first_name">First Name *</label>
+                <input type="text" id="first_name" name="first_name" value="Andrews" placeholder="e.g., Jane" required>
+
+                <label for="middle_name">Middle Name/Initial (Optional)</label>
+                <input type="text" id="middle_name" name="middle_name" value="" placeholder="e.g., M">
+
+                <label for="last_name">Last Name *</label>
+                <input type="text" id="last_name" name="last_name" value="Palaparthi" placeholder="e.g., Doe" required>
+
+                <label for="nickname">Nickname/Preferred Name (Optional)</label>
+                <input type="text" id="nickname" name="nickname" value="" placeholder="e.g., Janie">
+            </fieldset>
+
+            <fieldset>
+                <legend>Course Agreement</legend>
+
+                <label for="ack_statement">Acknowledgment Statement *</label>
+                <input type="text" id="ack_statement" name="ack_statement" value="I understand the requirements of this course." placeholder="I acknowledge the syllabus..." required>
+
+                <label for="ack_date">Acknowledgement Date *</label>
+                <input type="date" id="ack_date" name="ack_date" value="2026-01-20" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Branding & Imagery</legend>
+
+                <label for="mascot_adj">Mascot Adjective *</label>
+                <input type="text" id="mascot_adj" name="mascot_adj" value="Armored" placeholder="e.g., Dapper" required>
+
+                <label for="mascot_animal">Mascot Animal *</label>
+                <input type="text" id="mascot_animal" name="mascot_animal" value="Porcupine" placeholder="e.g., Vicuna" required>
+
+                <label for="divider">Divider Symbol *</label>
+                <input type="text" id="divider" name="divider" value="~" placeholder="e.g., ~, |, ♥️" required>
+
+                <label for="user_image">Picture (Upload your own) *</label>
+                <input type="file" id="user_image" name="user_image" accept="image/*">
+
+                <label for="image_caption">Picture Caption *</label>
+                <input type="text" id="image_caption" name="image_caption" value="I won’t say it’s my dream truck, but I definitely want to get my hands on one" placeholder="A photo of me at the beach" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Background & Details</legend>
+
+                <label for="personal_statement">Personal Statement *</label>
+                <textarea id="personal_statement" name="personal_statement" placeholder="A brief intro about yourself..." required>I am a senior at UNC Charlotte studying Computer Science with a focus in Human-Computer Interaction. Designing and creating user interfaces and prototypes just give me so much excitement. I love listening to music and I don’t know if I can call myself an audiophile but I have spent significant dollars on music streaming services and listening devices to get the best sound.</textarea>
+
+                <label for="personal_bg">Personal Background *</label>
+                <textarea id="personal_bg" name="personal_bg" placeholder="Where did you grow up?" required>I was born in India and I’m currently 22 years old. I love cars and tech devices. Not just computers but TVs, audio devices, game consoles, smartphones, etc.</textarea>
+
+                <label for="professional_bg">Professional Background *</label>
+                <textarea id="professional_bg" name="professional_bg" placeholder="What is your work experience?" required>I have worked 30 days in the Audi service department, before realizing that it’s not for me. Then I switched to Geek Squad as Advanced Repair Agent and also a Certified Apple Repair Agent. I worked for a year repairing PCs, Macs, iPhones, and also helping out the client facing agents when necessary to help customers in check-in their devices for repairs/shipping.</textarea>
+
+                <label for="academic_bg">Academic Background *</label>
+                <textarea id="academic_bg" name="academic_bg" placeholder="What is your major?" required>I’m currently a Senior at UNC Charlotte studying Computer Science with a focus in Human-Computer Interaction. Before that I attended high school in Littleton, Massachusetts and Apex, North Carolina. I started out at Wake Tech and got my Associates in Science degree. Later I transferred to UNC Greensboro and realized that that school was not for me and transferred once more to UNC Charlotte.</textarea>
+
+                <label for="subject_bg">Background in this Subject *</label>
+                <textarea id="subject_bg" name="subject_bg" placeholder="What is your tech experience?" required>I have twice taken this course with varying degrees of success and ultimately ended up dropping on both occasions. But now I am locked in!</textarea>
+
+                <label for="primary_computer">Primary Work Computer *</label>
+                <textarea id="primary_computer" name="primary_computer" placeholder="Mac or Windows?" required>The laptop I use for university is a Lenovo Yoga 9i running Windows 11 Pro with 12th Gen Intel Core i7 and 16GB of RAM. Bogs down heavily under pressure because RAM is not enough even though I got the highest config at the time of purchase. Unfortunately the RAM is soldered to the board however I came this far with this laptop, so I decided to go past the finish line with this setup and save money.</textarea>
+
+                <label for="backup_computer">Backup Work Computer & Location Plan *</label>
+                <textarea id="backup_computer" name="backup_computer" placeholder="What is your backup plan?" required>No planned backup option for now, but if need be then library is my option.</textarea>
+
+                <label for="funny_thing">Funny Thing (Optional)</label>
+                <textarea id="funny_thing" name="funny_thing" placeholder="Share a funny story..."></textarea>
+
+                <label for="share_thing">I'd also like to share (Optional)</label>
+                <textarea id="share_thing" name="share_thing" placeholder="Anything else?">NinerLink will be my kryptonite.</textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Quote & Links</legend>
+
+                <label for="quote">Favorite Quote *</label>
+                <input type="text" id="quote" name="quote" value="What is truth?" placeholder="Enter a quote..." required>
+
+                <label for="quote_author">Quote Author *</label>
+                <input type="text" id="quote_author" name="quote_author" value="Pontius Pilate" placeholder="Who said it?" required>
+
+                <h4>5 Links</h4>
+                <input type="url" name="link_1" value="https://github.com/AndrewsP04" placeholder="Link 1 URL" required>
+                <input type="url" name="link_2" value="https://webpages.charlotte.edu/apalapa1" placeholder="Link 2 URL" required>
+                <input type="url" name="link_3" value="https://AndrewsP04.github.io" placeholder="Link 3 URL" required>
+                <input type="url" name="link_4" value="https://www.freecodecamp.org/andrewsp" placeholder="Link 4 URL" required>
+                <input type="url" name="link_5" value="https://www.linkedin.com/in/andrews-p" placeholder="Link 5 URL" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Courses</legend>
+                <div id="course-container">
+                    <div class="course-entry">
+                        <input type="text" name="dept" value="ITIS" placeholder="Dept" required>
+                        <input type="text" name="course_num" value="3135" placeholder="Number" required>
+                        <input type="text" name="course_name" value="Front-End Web App Development" placeholder="Name" required>
+                        <input type="text" name="reason" value="Required class." placeholder="Reason" required>
+                        <button type="button" onclick="this.parentElement.remove()">Delete</button>
+                    </div>
+                    <div class="course-entry">
+                        <input type="text" name="dept" value="ITSC" placeholder="Dept" required>
+                        <input type="text" name="course_num" value="2600" placeholder="Number" required>
+                        <input type="text" name="course_name" value="CS Program, Identity, Career" placeholder="Name" required>
+                        <input type="text" name="reason" value="Required class." placeholder="Reason" required>
+                        <button type="button" onclick="this.parentElement.remove()">Delete</button>
+                    </div>
+                    <div class="course-entry">
+                        <input type="text" name="dept" value="ITSC" placeholder="Dept" required>
+                        <input type="text" name="course_num" value="3688" placeholder="Number" required>
+                        <input type="text" name="course_name" value="Comp & Their Impact on Society" placeholder="Name" required>
+                        <input type="text" name="reason" value="Required class." placeholder="Reason" required>
+                        <button type="button" onclick="this.parentElement.remove()">Delete</button>
+                    </div>
+                </div>
+                <button type="button" onclick="addCourse()" style="margin-top: 10px;">+ Add Course</button>
+            </fieldset>
+
+            <hr>
+
+            <div class="form-controls">
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+                <button type="button" id="clearBtn">Clear</button>
+                <button type="button" id="genHTMLBtn" onclick="generateHTML()">Generate HTML</button>
+                <button type="button" id="genJSONBtn" onclick="generateJSON()">Generate JSON</button>
+            </div>
+        </form>
+
+        <div id="result-container" style="display: none; margin-top: 2rem;"></div>
+    </main>
+
+    <div data-include="components/footer.html"></div>
+
+    <script src="scripts/introduction.js"></script>
+    <script src="scripts/generate_html.js"></script>
+    <script src="scripts/generate_json.js"></script>
+</body>
+</html>
