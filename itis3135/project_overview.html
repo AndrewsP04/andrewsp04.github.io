@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Overview | Andrews Palaparthi</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <script src="scripts/HTMLInclude.min.js" defer></script>
+</head>
+<body>
+    <div data-include="components/header.html"></div>
+
+    <main>
+        <h2>Project Overview & Design Document</h2>
+        
+        <section id="project-name">
+            <h3>Project Name</h3>
+            <p><strong>CodeCraft: Front-End Basics Tutor</strong></p>
+        </section>
+
+        <section id="overview">
+            <h3>Project Overview</h3>
+            <ul>
+                <li><strong>Purpose:</strong> To design and develop an interactive educational web application for a peer student who wants to learn the fundamental concepts of HTML, CSS, and JavaScript.</li>
+                <li><strong>Intended Users:</strong> Beginners and peer classmates with little to no coding experience who want a guided, hands-on introduction to web development.</li>
+                <li><strong>Content Overview:</strong> The site will feature structured learning modules, visual examples of CSS styling, a glossary of coding terms, a dynamic quiz to test their knowledge, and a contact page for tutoring assistance.</li>
+            </ul>
+        </section>
+
+        <section id="client-info">
+            <h3>Client Information</h3>
+            <ul>
+                <li><strong>Name of Client:</strong> Amaranth</li>
+                <li><strong>Organization:</strong> NC State</li>
+                <li><strong>Email:</strong> amryb23@outlook.com</li>
+                <li><strong>Phone:</strong> (919) 924 - 2340</li>
+            </ul>
+        </section>
+
+        <section id="wireframe">
+            <h3>Wireframe</h3>
+            <p>Below is the structural wireframe for the default layout of the web application, demonstrating the navigational flow and content hierarchy for the learning modules.</p>
+            <figure>
+                <a href="images/wireframe_large.png" target="_blank">
+                    <img src="images/wireframe.png" alt="Wireframe layout for the CodeCraft learning site" style="max-width: 100%; border: 1px solid #ccc;">
+                </a>
+                <figcaption>Figure 1: Homepage layout wireframe (Click to enlarge).</figcaption>
+            </figure>
+        </section>
+
+        <section id="sitemap">
+            <h3>Site Map</h3>
+            <p>The site map illustrates the navigational hierarchy and the relationships between the 5 core pages of the educational application.</p>
+            <figure>
+                <a href="images/sitemap_large.png" target="_blank">
+                    <img src="images/sitemap.png" alt="Site map showing 5 pages connected to the homepage" style="max-width: 100%; border: 1px solid #ccc;">
+                </a>
+                <figcaption>Figure 2: Website navigation site map (Click to enlarge).</figcaption>
+            </figure>
+        </section>
+
+        <section id="page-design">
+            <h3>Page Design Details</h3>
+            
+            <h4>1. Home Page / Dashboard (index.html)</h4>
+            <ul>
+                <li><strong>Purpose:</strong> To welcome the student and provide an overview of the curriculum.</li>
+                <li><strong>Audience:</strong> The student user.</li>
+                <li><strong>Content:</strong> A friendly introduction, course objectives, and quick links to the HTML, CSS, and JS modules.</li>
+                <li><strong>Data Entry:</strong> None.</li>
+                <li><strong>Actions:</strong> Navigation clicks to begin the lessons.</li>
+            </ul>
+
+            <h4>2. CSS Visualizer Lesson (css_lesson.html)</h4>
+            <ul>
+                <li><strong>Purpose:</strong> To teach the basics of Cascading Style Sheets through visual examples.</li>
+                <li><strong>Audience:</strong> The student user.</li>
+                <li><strong>Content:</strong> Explanations of properties like color, padding, margins, and flexbox.</li>
+                <li><strong>Data Entry:</strong> None.</li>
+                <li><strong>Actions:</strong> Users will interact with buttons that trigger JavaScript to change the CSS of elements on the page in real-time (e.g., clicking a button to change a box from blue to red).</li>
+            </ul>
+
+            <h4>3. JavaScript Basics (js_lesson.html)</h4>
+            <ul>
+                <li><strong>Purpose:</strong> To introduce core programming logic like variables, functions, and events.</li>
+                <li><strong>Audience:</strong> The student user.</li>
+                <li><strong>Content:</strong> Code snippets, explanations of syntax, and a small interactive calculator or counter example.</li>
+                <li><strong>Data Entry:</strong> Yes (Basic text inputs for the interactive examples).</li>
+                <li><strong>Actions:</strong> Users can click buttons to run simple predefined JavaScript functions (like triggering an alert or adding two numbers) to see how JS interacts with HTML.</li>
+            </ul>
+
+            <h4>4. Knowledge Check Quiz (quiz.html)</h4>
+            <ul>
+                <li><strong>Purpose:</strong> To assess what the student has learned from the modules.</li>
+                <li><strong>Audience:</strong> The student user.</li>
+                <li><strong>Content:</strong> A multiple-choice quiz covering HTML tags, CSS properties, and JS concepts.</li>
+                <li><strong>Data Entry:</strong> Yes (Radio buttons and checkboxes for quiz answers).</li>
+                <li><strong>Validations:</strong> JavaScript will ensure all questions are answered before allowing submission.</li>
+                <li><strong>Actions:</strong> Clicking "Submit" will instantly calculate their score and display a dynamic results message with feedback.</li>
+            </ul>
+
+            <h4>5. Ask the Tutor (contact.html)</h4>
+            <ul>
+                <li><strong>Purpose:</strong> To allow the student to request help or ask specific coding questions.</li>
+                <li><strong>Audience:</strong> The student user.</li>
+                <li><strong>Content:</strong> A contact form and resources/links for further learning (like MDN or freeCodeCamp).</li>
+                <li><strong>Data Entry:</strong> Yes (Name, Email, Module they are stuck on, Message).</li>
+                <li><strong>Validations:</strong> Standard HTML5 required fields and email formatting.</li>
+                <li><strong>Actions:</strong> Submission button processes the form data and displays a simulated "Message Sent" confirmation.</li>
+            </ul>
+        </section>
+
+        <section id="dynamic-functionality">
+            <h3>Dynamic Functionality</h3>
+            <ul>
+                <li><strong>Real-Time CSS Toggles (css_lesson.html):</strong> I will use JavaScript to allow the user to toggle CSS classes on a set of sample HTML elements. <em>Purpose:</em> To visually demonstrate how CSS properties (like `border-radius` or `background-color`) alter the DOM instantly. <em>Example:</em> <a href="https://css-tricks.com/" target="_blank">CSS-Tricks interactive snippets</a>.</li>
+                <li><strong>Instant Quiz Grader (quiz.html):</strong> I will use JavaScript to read the values of the selected radio buttons on the form, calculate a score, and dynamically inject the results (e.g., "3/5 Correct!") onto the page without refreshing. <em>Purpose:</em> To provide immediate feedback to the student to reinforce learning.</li>
+                <li><strong>Accordion FAQ/Glossary (index.html or js_lesson.html):</strong> I will use a jQuery UI Accordion widget to display a list of common coding terms. <em>Purpose:</em> To keep the page clean and organized by hiding definitions until the user clicks on a specific term to reveal the text.</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <div data-include="components/footer.html"></div>
+</body>
+</html>
