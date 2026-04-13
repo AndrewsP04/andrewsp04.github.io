@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Basics | CodeCraft</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="scripts/main.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>CodeCraft Tutor</h1>
+        <p>Master the Basics of Web Development</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Dashboard</a>
+        <a href="css_lesson.html">CSS Visualizer</a>
+        <a href="js_lesson.html" class="active">JavaScript</a>
+        <a href="quiz.html">Knowledge Check</a>
+        <a href="contact.html">Ask Tutor</a>
+    </nav>
+
+    <main>
+        <h2>Module 3: JavaScript Logic</h2>
+        <p>JavaScript allows you to create dynamically updating content, control multimedia, animate images, and handle user interactions.</p>
+        
+        <h3>Interactive Calculator Example</h3>
+        <p>Type numbers into the boxes and click calculate to see JavaScript math in action!</p>
+        
+        <div style="background: #ecf0f1; padding: 20px; border-radius: 8px; margin-bottom: 30px; display: inline-block;">
+            <input type="number" id="num1" placeholder="Number 1" style="padding: 8px; width: 100px; border: 1px solid #ccc; border-radius: 4px;"> 
+            <span style="font-weight: bold; margin: 0 10px;">+</span> 
+            <input type="number" id="num2" placeholder="Number 2" style="padding: 8px; width: 100px; border: 1px solid #ccc; border-radius: 4px;">
+            
+            <button type="button" id="calc-btn" style="padding: 8px 15px; margin-left: 10px; background-color: var(--accent-color); color: white; border: none; border-radius: 4px; cursor: pointer;">Calculate</button>
+            
+            <p style="margin-top: 15px; font-size: 1.2rem;"><strong>Result: <span id="calc-result" style="color: var(--primary-color);">0</span></strong></p>
+        </div>
+
+        <h3>Common Terms Glossary</h3>
+        <p>Click on the terms below to reveal their definitions using a jQuery UI Accordion.</p>
+        
+        <div id="glossary-accordion" style="max-width: 600px;">
+            <h4 style="background: var(--primary-color); color: white; padding: 12px; margin: 0; border-bottom: 1px solid #fff; cursor: pointer; border-radius: 4px 4px 0 0;">Variable</h4>
+            <div style="padding: 15px; background: #f9f9f9; border: 1px solid #ccc; border-top: none; margin-bottom: 5px;">A container for storing data values. In modern JavaScript, we declare these using <code>let</code> or <code>const</code>.</div>
+            
+            <h4 style="background: var(--primary-color); color: white; padding: 12px; margin: 0; border-bottom: 1px solid #fff; cursor: pointer;">DOM (Document Object Model)</h4>
+            <div style="padding: 15px; background: #f9f9f9; border: 1px solid #ccc; border-top: none; margin-bottom: 5px;">The programming interface for web documents. It represents the page so that programs can change the document structure, style, and content.</div>
+
+            <h4 style="background: var(--primary-color); color: white; padding: 12px; margin: 0; cursor: pointer;">Function</h4>
+            <div style="padding: 15px; background: #f9f9f9; border: 1px solid #ccc; border-top: none; border-radius: 0 0 4px 4px;">A reusable block of code designed to perform a specific task, executed when "called" or "invoked".</div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Page designed by <a href="andrewscreativegroup.com/index.html">Andrews Creative Group (ACG)</a> &copy; 2026</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    
+    <script>
+        $(document).ready(function() {
+            $("#glossary-accordion").accordion({
+                collapsible: true,
+                active: false,
+                heightStyle: "content"
+            });
+        });
+    </script>
+</body>
+</html>

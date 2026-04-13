@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knowledge Check | CodeCraft</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="scripts/main.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>CodeCraft Tutor</h1>
+        <p>Master the Basics of Web Development</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Dashboard</a>
+        <a href="css_lesson.html">CSS Visualizer</a>
+        <a href="js_lesson.html">JavaScript</a>
+        <a href="quiz.html" class="active">Knowledge Check</a>
+        <a href="contact.html">Ask Tutor</a>
+    </nav>
+
+    <main>
+        <h2>Module Quiz</h2>
+        <p>Test your knowledge! Select the best answer for each question below.</p>
+        
+        <form id="quiz-form" style="background: #f4f4f4; padding: 20px; border-radius: 8px;">
+            <fieldset style="border: 1px solid #ccc; margin-bottom: 15px; padding: 15px;">
+                <legend style="font-weight: bold;">1. What does HTML stand for?</legend>
+                <label><input type="radio" name="q1" value="wrong"> Hyper Tool Markup Language</label><br>
+                <label><input type="radio" name="q1" value="correct"> HyperText Markup Language</label><br>
+                <label><input type="radio" name="q1" value="wrong"> HyperText Machine Language</label>
+            </fieldset>
+
+            <fieldset style="border: 1px solid #ccc; margin-bottom: 15px; padding: 15px;">
+                <legend style="font-weight: bold;">2. Which CSS property changes the background color?</legend>
+                <label><input type="radio" name="q2" value="wrong"> color</label><br>
+                <label><input type="radio" name="q2" value="wrong"> bgcolor</label><br>
+                <label><input type="radio" name="q2" value="correct"> background-color</label>
+            </fieldset>
+
+            <div id="quiz-results" style="margin-top: 15px; font-weight: bold; color: var(--primary-color);"></div>
+
+            <button type="button" id="submit-quiz" style="background-color: var(--accent-color); color: white; padding: 10px 20px; border: none; cursor: pointer; border-radius: 4px; margin-top: 10px;">Submit Quiz</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>Page designed by <a href="andrewscreativegroup.com/index.html">Andrews Creative Group (ACG)</a> &copy; 2026</p>
+    </footer>
+
+</body>
+</html>

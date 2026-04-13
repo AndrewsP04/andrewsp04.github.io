@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Visualizer | CodeCraft</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="scripts/main.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>CodeCraft Tutor</h1>
+        <p>Master the Basics of Web Development</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Dashboard</a>
+        <a href="css_lesson.html" class="active">CSS Visualizer</a>
+        <a href="js_lesson.html">JavaScript</a>
+        <a href="quiz.html">Knowledge Check</a>
+        <a href="contact.html">Ask Tutor</a>
+    </nav>
+
+    <main>
+        <h2>Module 2: CSS Styling</h2>
+        <p>CSS dictates how HTML elements look. Try clicking the buttons below to see how CSS properties change the box in real-time.</p>
+        
+        <div style="display: flex; gap: 30px; align-items: center; margin-top: 20px; padding: 20px; background: #ecf0f1; border-radius: 8px;">
+            
+            <div style="display: flex; flex-direction: column; gap: 10px;">
+                <button id="btn-radius" style="padding: 10px; cursor: pointer;">Toggle Border Radius</button>
+                <button id="btn-color" style="padding: 10px; cursor: pointer;">Change Background Color</button>
+                <button id="btn-padding" style="padding: 10px; cursor: pointer;">Increase Padding</button>
+            </div>
+
+            <div id="demo-box" style="width: 150px; height: 150px; background-color: var(--primary-color); color: white; display: flex; justify-content: center; align-items: center; text-align: center; transition: all 0.3s ease;">
+                Target Box
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>Page designed by <a href="andrewscreativegroup.com/index.html">Andrews Creative Group (ACG)</a> &copy; 2026</p>
+    </footer>
+
+</body>
+</html>
