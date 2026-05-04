@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // ---------------------------------------------------------
     // REQUIREMENT 1: Custom JS (CSS Toggles, Quiz, & Calc)
     // ---------------------------------------------------------
-    
+
     // CSS Visualizer Toggles (css_lesson.html)
     const demoBox = document.getElementById('demo-box');
     if (demoBox) {
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let isRed = false;
         btnColor.addEventListener('click', () => {
             isRed = !isRed;
-            demoBox.style.backgroundColor = isRed ? '#e74c3c' : 'var(--primary-color)'; 
+            demoBox.style.backgroundColor = isRed ? '#e74c3c' : 'var(--primary-color)';
         });
 
         let isPadded = false;
@@ -56,13 +56,124 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Interactive Calculator (js_lesson.html)
-    const calcBtn = document.getElementById('calc-btn');
-    if (calcBtn) {
-        calcBtn.addEventListener('click', () => {
-            const num1 = parseFloat(document.getElementById('num1').value) || 0;
-            const num2 = parseFloat(document.getElementById('num2').value) || 0;
-            document.getElementById('calc-result').innerText = num1 + num2;
+    const display = document.getElementById('calc-result-main');
+    if (display) {
+        let currentInput = '0';
+        let previousInput = '';
+        let operation = null;
+        let displayValue = '0';
+
+        const addToHistory = (entry) => {
+            const historyLog = document.getElementById('history-log');
+            const emptyMsg = historyLog.querySelector('.empty-msg');
+            if (emptyMsg) emptyMsg.remove();
+            const li = document.createElement('li');
+            li.textContent = entry;
+            historyLog.appendChild(li);
+        };
+
+        // Clear History button
+        const clearHistoryBtn = document.getElementById('clear-history');
+        if (clearHistoryBtn) {
+            clearHistoryBtn.addEventListener('click', () => {
+                const historyLog = document.getElementById('history-log');
+                historyLog.innerHTML = '<li class="empty-msg">No calculations yet</li>';
+            });
+        }
+
+        // Number buttons
+        document.querySelectorAll('.btn-num').forEach((btn) => {
+            btn.addEventListener('click', (e) => {
+                const num = e.target.innerText;
+                if (currentInput === '0' && num !== '.') currentInput = num;
+                else currentInput += num;
+                if (displayValue === '0' && num !== '.') displayValue = num;
+                else displayValue += num;
+                display.innerText = displayValue;
+            });
         });
+
+        // Math Operator buttons (+, -, *, /)
+        document.querySelectorAll('.btn-op').forEach((btn) => {
+            btn.addEventListener('click', (e) => {
+                const op = e.target.getAttribute('data-op');
+                const opSymbols = { 'add': '+', 'subtract': '-', 'multiply': '*', 'divide': '/' };
+                const opSymbol = opSymbols[op];
+                if (previousInput !== '') {
+                    // Calculate intermediate result
+                    const prev = parseFloat(previousInput);
+                    const curr = parseFloat(currentInput);
+                    let res = 0;
+                    if (operation === 'add') res = prev + curr;
+                    else if (operation === 'subtract') res = prev - curr;
+                    else if (operation === 'multiply') res = prev * curr;
+                    else if (operation === 'divide') res = prev / curr;
+                    displayValue = res.toString() + ' ' + opSymbol + ' ';
+                    previousInput = res.toString();
+                } else {
+                    displayValue += ' ' + opSymbol + ' ';
+                    previousInput = currentInput;
+                }
+                currentInput = '0';
+                operation = op;
+                display.innerText = displayValue;
+            });
+        });
+
+        // Clear button (AC)
+        document.querySelectorAll('.btn-tool').forEach((btn) => {
+            btn.addEventListener('click', (e) => {
+                const op = e.target.getAttribute('data-op');
+                if (op === 'clear') {
+                    currentInput = '0';
+                    previousInput = '';
+                    operation = null;
+                    displayValue = '0';
+                    display.innerText = displayValue;
+                } else if (op === 'sqrt') {
+                    const num = parseFloat(currentInput);
+                    if (!isNaN(num) && num >= 0) {
+                        const result = Math.sqrt(num);
+                        displayValue = '√' + currentInput + ' = ' + result;
+                        currentInput = result.toString();
+                        display.innerText = displayValue;
+                        addToHistory('√' + currentInput + ' = ' + result);
+                    }
+                } else if (op === 'percent') {
+                    const num = parseFloat(currentInput);
+                    if (!isNaN(num)) {
+                        const result = num / 100;
+                        displayValue = currentInput + '% = ' + result;
+                        currentInput = result.toString();
+                        display.innerText = displayValue;
+                        addToHistory(currentInput + '% = ' + result);
+                    }
+                }
+            });
+        });
+
+        // Equals button (=)
+        const executeBtn = document.getElementById('calc-execute');
+        if (executeBtn) {
+            executeBtn.addEventListener('click', () => {
+                let result = 0;
+                const prev = parseFloat(previousInput);
+                const current = parseFloat(currentInput);
+                if (isNaN(prev) || isNaN(current)) return;
+
+                if (operation === 'add') result = prev + current;
+                else if (operation === 'subtract') result = prev - current;
+                else if (operation === 'multiply') result = prev * current;
+                else if (operation === 'divide') result = prev / current;
+
+                addToHistory(displayValue + ' = ' + result);
+                displayValue = result.toString();
+                currentInput = result.toString();
+                display.innerText = displayValue;
+                previousInput = '';
+                operation = null;
+            });
+        }
     }
 
     // ---------------------------------------------------------
@@ -92,4 +203,26 @@ document.addEventListener('DOMContentLoaded', () => {
             arrows: false
         });
     }
+
+    // Load Components dynamically
+    fetch('components/header.html')
+        .then((response) => response.text())
+        .then((data) => {
+            document.querySelector('div[data-include="components/header.html"]').innerHTML = data;
+            // Set active navigation link based on current page
+            const currentPage = window.location.pathname.split('/').pop();
+            const navLinks = document.querySelectorAll('nav a');
+            navLinks.forEach((link) => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+    fetch('components/footer.html')
+        .then((response) => response.text())
+        .then((data) => {
+            document.querySelector('div[data-include="components/footer.html"]').innerHTML = data;
+        });
 });
