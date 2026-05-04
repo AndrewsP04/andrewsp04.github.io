@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrews Palaparthi's Armored Porcupine | Product</title>
+    
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    
+    <style>
+        /* Product Page Specific Layout */
+        .hero { text-align: center; padding: 40px 20px; background-color: rgba(0,0,0,0.2); border-radius: 8px; margin-bottom: 40px; }
+        .hero h2 { font-size: 2.5rem; margin-bottom: 10px; }
+        
+        /* FCC Form Styling */
+        #form { display: flex; flex-direction: column; align-items: center; gap: 15px; margin-top: 20px; }
+        #email { padding: 12px; width: 100%; max-width: 300px; border-radius: 4px; border: none; font-size: 1rem; }
+        #submit { background-color: #FFD700; color: #1A2F23; border: none; padding: 12px 24px; font-weight: bold; border-radius: 4px; cursor: pointer; font-size: 1rem; transition: background 0.3s; }
+        #submit:hover { background-color: #FFF; }
+
+        /* Feature Grid */
+        .flex-container { display: flex; gap: 20px; justify-content: space-around; margin: 40px 0; text-align: center; flex-wrap: wrap; }
+        .feature-box { background: rgba(0,0,0,0.3); padding: 20px; border-radius: 8px; flex: 1; min-width: 250px; border-top: 3px solid #FFD700; }
+        
+        /* Video Container */
+        .video-section { margin: 60px auto; max-width: 700px; text-align: center; }
+        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.5); }
+        .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+        
+        /* Logo styling for FCC requirement */
+        #header-img { height: 40px; vertical-align: middle; margin-right: 10px; }
+    </style>
+</head>
+<body>
+
+    <header id="header">
+        <h1>
+            <img id="header-img" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48dGV4dCB5PSIuOWVtIiBmb250LXNpemU9IjkwIj7wn6aUPC90ZXh0Pjwvc3ZnPg==" alt="Armored Porcupine Logo">
+            Andrews Palaparthi's Armored Porcupine | Product
+        </h1>
+        <div data-include="components/header.html"></div>
+    </header>
+
+    <main style="max-width: 1000px; margin: 40px auto; padding: 20px;">
+        
+        <section id="preorder" class="hero">
+            <h2>The Armored Growler</h2>
+            <p>Take the pub home. Indestructible, spike-studded, and built for the deep woods.</p>
+            
+            <form id="form" action="https://www.freecodecamp.com/email-submit">
+                <label for="email" style="font-weight: bold; margin-top: 10px;">Join the waitlist for our next forge run:</label>
+                <input id="email" type="email" name="email" placeholder="Enter your email address" required>
+                <input id="submit" type="submit" value="Pre-Order Now ($49.99)">
+            </form>
+        </section>
+
+        <section id="features">
+            <h3 style="text-align: center; font-size: 2rem;">Why It's Barkeep Approved</h3>
+            <div class="flex-container">
+                <div class="feature-box">
+                    <h3 style="color: #FFD700;">Thermal Plating</h3>
+                    <p>Double-vacuum sealed to keep your Thistle Stout ice cold for up to 48 hours.</p>
+                </div>
+                <div class="feature-box">
+                    <h3 style="color: #FFD700;">Spiked Grip</h3>
+                    <p>Textured, porcupine-quill exterior guarantees you will never drop a drop.</p>
+                </div>
+                <div class="feature-box">
+                    <h3 style="color: #FFD700;">Eco-Forged</h3>
+                    <p>Crafted entirely from 100% recycled woodland materials and repurposed kegs.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="demo" class="video-section">
+            <h3>See it in the wild</h3>
+            <p>Watch how The Armored Growler stands up to the elements.</p>
+            <div class="video-wrapper">
+                <iframe id="video" src="https://www.youtube.com/embed/L_LUpnjgPso" title="Product Demo Video" allowfullscreen></iframe>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Page designed by <a href="../index.html">Andrews Creative Group (ACG)</a> &copy; 2026, 
+        <a href="https://www.freecodecamp.org/certification/andrewsp/responsive-web-design-v9" target="_blank">certified in Responsive Web Design</a></p>
+    </footer>
+
+</body>
+</html>

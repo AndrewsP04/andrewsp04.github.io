@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrews Palaparthi's Armored Porcupine | Playing Cards</title>
+    
+    <link rel="stylesheet" href="styles/default.css">
+    
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    
+    <style>
+        /* The Card Table / Container */
+        .card-table {
+            position: relative;
+            height: 450px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        /* Base Card Styling & Positioning */
+        .playing-card {
+            width: 200px;
+            height: 280px;
+            perspective: 1000px;
+            position: absolute;
+            transform-origin: bottom center;
+            transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+            box-shadow: -5px 10px 20px rgba(0,0,0,0.4);
+            border-radius: 12px;
+        }
+
+        /* Stacking Order */
+        .playing-card:nth-child(1) { z-index: 1; }
+        .playing-card:nth-child(2) { z-index: 2; }
+        .playing-card:nth-child(3) { z-index: 3; }
+        .playing-card:nth-child(4) { z-index: 4; }
+
+        /* The Pure CSS "Fan" Effect on Hover */
+        .card-table:hover .playing-card:nth-child(1) { transform: rotate(-30deg) translateX(-120px) translateY(30px); }
+        .card-table:hover .playing-card:nth-child(2) { transform: rotate(-10deg) translateX(-40px) translateY(5px); }
+        .card-table:hover .playing-card:nth-child(3) { transform: rotate(10deg) translateX(40px) translateY(5px); }
+        .card-table:hover .playing-card:nth-child(4) { transform: rotate(30deg) translateX(120px) translateY(30px); }
+
+        /* The 3D Flip Mechanics */
+        .card-inner {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            position: relative;
+        }
+        
+        .playing-card:hover .card-inner {
+            transform: rotateY(180deg);
+        }
+
+        /* Front and Back Faces */
+        .card-front, .card-back {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid #ccc;
+        }
+
+        /* Pub Branded Back */
+        .card-back {
+            background-color: #1A2F23;
+            color: #FFD700;
+            background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.05) 10px, rgba(255,255,255,0.05) 20px);
+        }
+        
+        .card-back h3 {
+            font-family: 'Georgia', serif;
+            text-align: center;
+            margin: 0;
+            padding: 10px;
+            border: 2px solid #FFD700;
+            border-radius: 8px;
+            background: rgba(0,0,0,0.6);
+        }
+
+        /* Literal Playing Card Face */
+        .card-front {
+            background-color: #F1F8E9;
+            transform: rotateY(180deg);
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .card-corner {
+            position: absolute;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+            line-height: 1;
+        }
+        
+        .top-left { top: 10px; left: 10px; }
+        .bottom-right { bottom: 10px; right: 10px; transform: rotate(180deg); }
+        .suit-center { font-size: 5rem; }
+        
+        .red { color: #d63031; }
+        .black { color: #2d3436; }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <h1>Andrews Palaparthi's Armored Porcupine | Cards</h1>
+        
+        <div data-include="components/header.html"></div>
+    </header>
+
+    <main style="max-width: 1000px; margin: 40px auto; padding: 20px;">
+        <div style="text-align: center;">
+            <h2>The Barkeep's Deck</h2>
+            <p>Hover over the stack to fan out the cards. Hover over an individual card to flip it over.</p>
+        </div>
+
+        <div class="card-table">
+            <div class="playing-card">
+                <div class="card-inner">
+                    <div class="card-back"><h3>The Prickly Pint</h3></div>
+                    <div class="card-front black">
+                        <div class="card-corner top-left">A<br>&spades;</div>
+                        <div class="suit-center">&spades;</div>
+                        <div class="card-corner bottom-right">A<br>&spades;</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="playing-card">
+                <div class="card-inner">
+                    <div class="card-back"><h3>The Prickly Pint</h3></div>
+                    <div class="card-front red">
+                        <div class="card-corner top-left">K<br>&hearts;</div>
+                        <div class="suit-center">&hearts;</div>
+                        <div class="card-corner bottom-right">K<br>&hearts;</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="playing-card">
+                <div class="card-inner">
+                    <div class="card-back"><h3>The Prickly Pint</h3></div>
+                    <div class="card-front red">
+                        <div class="card-corner top-left">Q<br>&diams;</div>
+                        <div class="suit-center">&diams;</div>
+                        <div class="card-corner bottom-right">Q<br>&diams;</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="playing-card">
+                <div class="card-inner">
+                    <div class="card-back"><h3>The Prickly Pint</h3></div>
+                    <div class="card-front black">
+                        <div class="card-corner top-left">J<br>&clubs;</div>
+                        <div class="suit-center">&clubs;</div>
+                        <div class="card-corner bottom-right">J<br>&clubs;</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Page designed by <a href="../index.html">Andrews Creative Group (ACG)</a> &copy; 2026, 
+        <a href="https://www.freecodecamp.org/certification/andrewsp/responsive-web-design-v9" target="_blank">certified in Responsive Web Design</a></p>
+    </footer>
+
+</body>
+</html>

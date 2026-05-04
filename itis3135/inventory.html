@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrews Palaparthi's Armored Porcupine | Cellar Inventory</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+<style>
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { border: 1px solid #4a6354; padding: 12px; text-align: left; }
+    
+    /* Darker header with Gold text to match your theme */
+    th { background-color: #0D1B14; color: #FFD700; }
+    
+    /* Fix for the alternating rows in Dark Mode */
+    tr:nth-child(even) { background-color: rgba(255, 255, 255, 0.05); }
+    
+    /* Optional: Add a subtle hover effect so the Barkeep knows what row they are reading */
+    tr:hover { background-color: rgba(255, 255, 255, 0.1); }
+</style>
+</head>
+<body>
+    <h1>Andrews Palaparthi's Armored Porcupine | Inventory</h1>
+    <div data-include="components/header.html"></div>
+
+    <main style="max-width: 800px; margin: 40px auto; padding: 20px;">
+        <h2>Back-of-House Inventory</h2>
+        <p>For Barkeep Eyes Only. Please ensure we do not run out of Oreos.</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Item ID</th>
+                    <th>Ingredient / Product</th>
+                    <th>Stock Level</th>
+                    <th>Next Delivery</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>#101</td>
+                    <td>Roasted Malt Barley</td>
+                    <td>15 Sacks</td>
+                    <td>Monday</td>
+                </tr>
+                <tr>
+                    <td>#102</td>
+                    <td>Pine Needles (Food Grade)</td>
+                    <td>3 Bushels</td>
+                    <td>Thursday</td>
+                </tr>
+                <tr>
+                    <td>#205</td>
+                    <td>Double Stuf Oreos</td>
+                    <td>2 Boxes (CRITICAL)</td>
+                    <td>Tomorrow</td>
+                </tr>
+                <tr>
+                    <td>#301</td>
+                    <td>Frying Oil</td>
+                    <td>5 Gallons</td>
+                    <td>Next Week</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <div data-include="components/footer.html"></div>
+</body>
+</html>

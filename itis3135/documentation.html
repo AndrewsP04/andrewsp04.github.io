@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrews Palaparthi's Armored Porcupine | Documentation</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <style>
+        .doc-layout { display: flex; gap: 20px; margin: 40px auto; max-width: 1000px; padding: 20px;}
+        #navbar { width: 250px; background: var(--card-bg); padding: 15px; border-right: 2px solid #ccc; border-radius: 8px; }
+        #navbar a { display: block; padding: 10px; color: var(--text-color); text-decoration: none; border-bottom: 1px solid #ddd; }
+        #navbar a:hover { background: var(--accent-color); color: white; }
+        .main-section { margin-bottom: 30px; }
+        pre { background: #1e293b; color: #f8fafc; padding: 15px; border-radius: 4px; overflow-x: auto; }
+        
+        /* Responsive layout for mobile */
+        @media (max-width: 768px) {
+            .doc-layout { flex-direction: column; }
+            #navbar { width: 100%; border-right: none; border-bottom: 2px solid #ccc; }
+        }
+    </style>
+</head>
+<body>
+    <h1>Andrews Palaparthi's Armored Porcupine | Documentation</h1>
+    <div data-include="components/header.html"></div>
+
+    <main class="doc-layout">
+        <nav id="navbar">
+            <header style="font-weight: bold; font-size: 1.2rem; padding: 10px 0;">Training Manual</header>
+            <a class="nav-link" href="#Tapping_a_Keg">Tapping a Keg</a>
+            <a class="nav-link" href="#Frying_Oreos">Frying Oreos</a>
+            <a class="nav-link" href="#Unruly_Badgers">Unruly Badgers</a>
+            <a class="nav-link" href="#Closing_Duties">Closing Duties</a>
+        </nav>
+
+        <div style="flex: 1;">
+            <h2>Staff Technical Documentation</h2>
+            
+            <section class="main-section" id="Tapping_a_Keg">
+                <header><h3>Tapping a Keg</h3></header>
+                <p>Ensure the CO2 pressure is set to exactly 12 PSI for the Thistle Stout to prevent excess foam.</p>
+                <pre><code>function pourPint(glassSize) {
+    let tilt = 45; // degrees
+    return "Perfect Pour!";
+}</code></pre>
+            </section>
+
+            <section class="main-section" id="Frying_Oreos">
+                <header><h3>Frying Oreos</h3></header>
+                <p>The oil must be maintained at 375°F. Do not leave the fryer unattended.</p>
+                <ul>
+                    <li>Dip cookie in batter completely.</li>
+                    <li>Fry for 2 minutes until golden brown.</li>
+                </ul>
+            </section>
+
+            <section class="main-section" id="Unruly_Badgers">
+                <header><h3>Unruly Badgers</h3></header>
+                <p>If a badger enters the patio area, do not offer it pretzels. Use the broom gently.</p>
+            </section>
+
+            <section class="main-section" id="Closing_Duties">
+                <header><h3>Closing Duties</h3></header>
+                <p>Lock the cellar, scrub the bar top, and ensure the porcupine quills are swept up.</p>
+            </section>
+        </div>
+    </main>
+
+    <div data-include="components/footer.html"></div>
+</body>
+</html>
