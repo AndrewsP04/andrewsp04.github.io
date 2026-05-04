@@ -6,6 +6,7 @@
     <title>JavaScript Basics | CodeCraft</title>
     <link rel="stylesheet" href="styles/main.css">
     <script src="scripts/main.js" defer></script>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -29,15 +30,42 @@
         <h3>Interactive Calculator Example</h3>
         <p>Type numbers into the boxes and click calculate to see JavaScript math in action!</p>
         
-        <div style="background: #ecf0f1; padding: 20px; border-radius: 8px; margin-bottom: 30px; display: inline-block;">
-            <input type="number" id="num1" placeholder="Number 1" style="padding: 8px; width: 100px; border: 1px solid #ccc; border-radius: 4px;"> 
-            <span style="font-weight: bold; margin: 0 10px;">+</span> 
-            <input type="number" id="num2" placeholder="Number 2" style="padding: 8px; width: 100px; border: 1px solid #ccc; border-radius: 4px;">
-            
-            <button type="button" id="calc-btn" style="padding: 8px 15px; margin-left: 10px; background-color: var(--accent-color); color: white; border: none; border-radius: 4px; cursor: pointer;">Calculate</button>
-            
-            <p style="margin-top: 15px; font-size: 1.2rem;"><strong>Result: <span id="calc-result" style="color: var(--primary-color);">0</span></strong></p>
+<div class="calculator-container">
+    <div class="calc-main">
+        <div class="calc-display">
+            <div id="calc-history-preview"></div>
+            <div id="calc-result-main">0</div>
         </div>
+        
+        <div class="calc-grid">
+            <button class="btn-tool" data-op="clear">AC</button>
+            <button class="btn-tool" data-op="sqrt">√</button>
+            <button class="btn-tool" data-op="percent">%</button>
+            <button class="btn-op" data-op="divide">÷</button>
+            
+            <button class="btn-num">7</button><button class="btn-num">8</button><button class="btn-num">9</button>
+            <button class="btn-op" data-op="multiply">×</button>
+            
+            <button class="btn-num">4</button><button class="btn-num">5</button><button class="btn-num">6</button>
+            <button class="btn-op" data-op="subtract">−</button>
+            
+            <button class="btn-num">1</button><button class="btn-num">2</button><button class="btn-num">3</button>
+            <button class="btn-op" data-op="add">+</button>
+            
+            <button class="btn-num btn-zero">0</button>
+            <button class="btn-num">.</button>
+            <button id="calc-execute" class="btn-equals">=</button>
+        </div>
+    </div>
+
+    <div class="calc-sidebar">
+        <h4>History</h4>
+        <ul id="history-log">
+            <li class="empty-msg">No calculations yet</li>
+        </ul>
+        <button id="clear-history">Clear History</button>
+    </div>
+</div>
 
         <h3>Common Terms Glossary</h3>
         <p>Click on the terms below to reveal their definitions using a jQuery UI Accordion.</p>
@@ -61,7 +89,7 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
     
-    <script>
+    <!--<script>
         $(document).ready(function() {
             $("#glossary-accordion").accordion({
                 collapsible: true,
@@ -69,6 +97,6 @@
                 heightStyle: "content"
             });
         });
-    </script>
+    </script>-->
 </body>
 </html>
