@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrews Palaparthi's Armored Porcupine | Survey</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div data-include="components/header.html"></div>
+
+    <main id="main-doc" style="max-width: 600px; margin: 40px auto; padding: 20px;">
+        <h2 id="title">Patron Feedback Form</h2>
+        <p id="description">Tell us about your woodland pub experience!</p>
+        
+        <form id="survey-form" style="display: flex; flex-direction: column; gap: 15px;">
+            <label id="name-label" for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required style="padding: 10px; border-radius: 4px; border: 1px solid #ccc;">
+
+            <label id="email-label" for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required style="padding: 10px; border-radius: 4px; border: 1px solid #ccc;">
+
+            <label id="number-label" for="number">Party Size (1-10):</label>
+            <input type="number" id="number" name="number" min="1" max="10" placeholder="Number of guests" style="padding: 10px; border-radius: 4px; border: 1px solid #ccc;">
+
+            <label for="dropdown">Preferred Seating Area:</label>
+            <select id="dropdown" name="seating" style="padding: 10px; border-radius: 4px; border: 1px solid #ccc;">
+                <option value="hearth">By The Hearth</option>
+                <option value="patio">The Outdoor Patio</option>
+                <option value="bar">At The Bar</option>
+            </select>
+
+            <fieldset style="border: 1px solid #ccc; padding: 10px; border-radius: 4px;">
+                <legend>Favorite House Brew:</legend>
+                <label><input type="radio" name="brew" value="thistle" checked> Thistle Stout</label><br>
+                <label><input type="radio" name="brew" value="acorn"> Acorn Amber Ale</label><br>
+                <label><input type="radio" name="brew" value="pine"> Pine Needle Pilsner</label>
+            </fieldset>
+
+            <fieldset style="border: 1px solid #ccc; padding: 10px; border-radius: 4px;">
+                <legend>What did you order? (Check all that apply):</legend>
+                <label><input type="checkbox" name="food" value="oreos"> Deep-Fried Oreos</label><br>
+                <label><input type="checkbox" name="food" value="pretzel"> Armored Giant Pretzel</label><br>
+                <label><input type="checkbox" name="food" value="chips"> Truffle Root Chips</label>
+            </fieldset>
+
+            <label for="comments">Any suggestions for the Barkeep?</label>
+            <textarea id="comments" name="comments" rows="4" placeholder="Leave your feedback here..." style="padding: 10px; border-radius: 4px; border: 1px solid #ccc;"></textarea>
+
+            <button type="submit" id="submit" style="background-color: var(--accent-color); color: white; padding: 10px; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">Submit Feedback</button>
+        </form>
+    </main>
+
+    <div data-include="components/footer.html"></div>
+</body>
+</html>
