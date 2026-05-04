@@ -6,7 +6,7 @@ Welcome to my academic repository and professional sandbox. I am a senior Comput
 ---
 
 ## 🚀 Live Site
-Check out the live deployment here: [https://andrewsp.github.io/itis3135/](https://andrewsp.github.io/itis3135/)
+Check out the live deployment here: [https://andrewsp.github.io/itis3135/](https://andrewspalaparthi.com/itis3135/)
 
 ---
 
