@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,19 +9,15 @@
     <script src="scripts/main.js" defer></script>
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
 
-    <header>
-        <h1>CodeCraft Tutor</h1>
-        <p>Master the Basics of Web Development</p>
-    </header>
-
-<div data-include="components/header.html"></div>
+    <div data-include="components/header.html"></div>
 
     <main>
         <h2>Module Quiz</h2>
         <p>Test your knowledge! Select the best answer for each question below.</p>
-        
+
         <form id="quiz-form" style="background: #f4f4f4; padding: 20px; border-radius: 8px;">
             <fieldset style="border: 1px solid #ccc; margin-bottom: 15px; padding: 15px;">
                 <legend style="font-weight: bold;">1. What does HTML stand for?</legend>
@@ -38,11 +35,14 @@
 
             <div id="quiz-results" style="margin-top: 15px; font-weight: bold; color: var(--primary-color);"></div>
 
-            <button type="button" id="submit-quiz" style="background-color: var(--accent-color); color: white; padding: 10px 20px; border: none; cursor: pointer; border-radius: 4px; margin-top: 10px;">Submit Quiz</button>
+            <button type="button" id="submit-quiz"
+                style="background-color: var(--accent-color); color: white; padding: 10px 20px; border: none; cursor: pointer; border-radius: 4px; margin-top: 10px;">Submit
+                Quiz</button>
         </form>
     </main>
 
     <div data-include="components/footer.html"></div>
 
 </body>
+
 </html>
