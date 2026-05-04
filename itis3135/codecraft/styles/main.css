@@ -134,6 +134,27 @@ footer p {
     opacity: 0.9;
 }
 
+.validation-buttons {
+    margin-top: 1rem;
+}
+
+.validation-btn {
+    display: inline-block;
+    margin: 0 0.35rem;
+    padding: 0.6rem 1rem;
+    background: var(--accent-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.validation-btn:hover {
+    background-color: #b45309;
+    transform: translateY(-1px);
+}
+
 footer a {
     color: var(--accent-color);
     text-decoration: none;
